@@ -17,15 +17,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      taskId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "tasks",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "SET NULL",
-      },
+
       date: {
         allowNull: false,
         type: Sequelize.DATEONLY,

@@ -6,7 +6,6 @@ module.exports = {
       "challenges",
       [
         {
-          taskId: 1,
           date: "01-01-2021",
           createdAt: new Date(),
           updatedAt: new Date(),

@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   challenge.init(
     {
-      taskId: DataTypes.INTEGER,
       date: DataTypes.DATEONLY,
     },
 
