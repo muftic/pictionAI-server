@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       imageUrl: DataTypes.STRING,
       classification: DataTypes.STRING,
-      score: DataTypes.INTEGER,
+      score: DataTypes.FLOAT,
+      challengeId: DataTypes.INTEGER,
     },
     {
       sequelize,

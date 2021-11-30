@@ -13,10 +13,18 @@ router.get("/submissions", async (req, res) => {
 
 router.post("/submissions", async (req, res) => {
   const { classification, imageUrl, score, userId, challengeId } = req.body;
-
+  /*  let probabilities = classification.probs.map(function (prob, i) {
+    if (prob.label === "soccer ball") {
+      return prob.confidence;
+    }
+  }); */
+  console.log("classification", classification);
+  const jsonClass = JSON.parse(classification);
+  console.log(typeof jsonClass);
+  console.log(jsonClass[0].confidence);
   const submission = await Submission.create({
     imageUrl,
-    score,
+    score: jsonClass[0].confidence * 1000,
     createdAt: new Date(),
     updatedAt: new Date(),
     userId: 1,
