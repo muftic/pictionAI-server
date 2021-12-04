@@ -6,7 +6,32 @@ module.exports = {
       "challenges",
       [
         {
-          date: "01-01-2021",
+          name: "soccer ball",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "car",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "apple",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "sword",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "banana",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "monkey",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
