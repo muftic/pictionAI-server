@@ -17,10 +17,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-
-      date: {
+      name: {
         allowNull: false,
-        type: Sequelize.DATEONLY,
+        type: Sequelize.STRING,
       },
     });
   },

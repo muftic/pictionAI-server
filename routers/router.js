@@ -35,4 +35,9 @@ router.post("/submissions", async (req, res) => {
   return res.status(201).send({ message: "Success!", submission });
 });
 
+router.get("/challenges", async (req, res) => {
+  let challenges = await Challenge.findAll({});
+  return res.status(200).send({ message: "Success!", challenges });
+});
+
 module.exports = router;

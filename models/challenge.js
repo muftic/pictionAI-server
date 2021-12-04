@@ -8,12 +8,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      challenge.belongsTo(models.submission);
+      challenge.hasMany(models.submission);
     }
   }
   challenge.init(
     {
-      date: DataTypes.DATEONLY,
+      name: DataTypes.STRING,
     },
 
     {

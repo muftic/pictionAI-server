@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       submission.belongsTo(models.user);
-      submission.hasOne(models.challenge);
+      submission.belongsTo(models.challenge);
     }
   }
   submission.init(
