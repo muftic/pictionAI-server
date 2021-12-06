@@ -28,7 +28,7 @@ router.post("/submissions", async (req, res) => {
     createdAt: new Date(),
     updatedAt: new Date(),
     userId: 1,
-    challengeId: 1,
+    challengeId,
     classification,
   });
 
