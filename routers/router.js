@@ -5,6 +5,10 @@ const User = require("../models").user;
 const router = new Router();
 const auth = require("../auth/middleware");
 const Submission = require("../models").submission;
+router.get("/", async (req, res) => {
+  let submissions = await Submission.findAll({});
+  return res.status(200).send({ message: "Success!", submissions });
+});
 
 router.get("/submissions", async (req, res) => {
   let submissions = await Submission.findAll({});
