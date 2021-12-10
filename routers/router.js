@@ -11,8 +11,14 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/submissions", async (req, res) => {
-  let submissions = await Submission.findAll({});
-  return res.status(200).send({ message: "Success!", submissions });
+  try {
+    let submissions = await Submission.findAll({});
+    return res.status(200).send({ message: "Success!", submissions });
+  } catch (error) {
+    res
+      .status(400)
+      .send({ message: "Something went wrong", error: error.message });
+  }
 });
 
 router.post("/submissions", async (req, res) => {
